@@ -294,6 +294,20 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 <!-- showcase:start -->
 
+## Research Report
+
+**Tamper-Evident Certificate Verification Using Cryptographic Commitments**
+
+_An evaluation of Merkle-tree commitments and digital signatures for revocable certificate registries_
+
+A self-contained research-grade report (Abstract, Introduction, Research Problem, Research Questions, Literature Review, Research Method, Data Description, Analysis, Discussion, Conclusion, Future Work, References) is published with this repository.
+
+[Read the full report (PDF)](docs/research_report.pdf)
+
+**Keywords:** certificate verification, Merkle tree, digital signatures, revocation, tamper-evidence
+
+![Research metrics](docs/research_metrics.png)
+
 ## Architecture
 
 ```mermaid
