@@ -289,3 +289,41 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - Blockchain concepts from Satoshi Nakamoto's Bitcoin whitepaper
 - RSA cryptography via the Python `cryptography` library
 - Merkle tree implementation inspired by certificate transparency logs
+
+---
+
+<!-- showcase:start -->
+
+## Architecture
+
+```mermaid
+flowchart LR
+    Cert[Certificate] --> Hash[SHA-256 Hash]
+    Hash --> Sign[RSA Sign]
+    Sign --> Block[Block Builder]
+    Block --> Merkle[Merkle Tree Root]
+    Block --> Chain[(Cert Chain)]
+    Verifier[Verifier] -->|hash + sig| Chain
+    Verifier --> RSA_Verify[RSA Verify]
+    RSA_Verify --> Result[Valid / Invalid]
+```
+
+## Test Results
+
+![Test results](docs/test_results.png)
+
+**86 passing**, **0 failing**, **0 skipped** (total 86, framework: pytest)
+
+## References & Further Reading
+
+- Nakamoto, S. (2008). *Bitcoin: A Peer-to-Peer Electronic Cash System.* [↗](https://bitcoin.org/bitcoin.pdf)
+- Merkle, R. C. (1988). *A Digital Signature Based on a Conventional Encryption Function.* CRYPTO '87. [↗](https://link.springer.com/chapter/10.1007/3-540-48184-2_32)
+- Rivest, R., Shamir, A., & Adleman, L. (1978). *A method for obtaining digital signatures and public-key cryptosystems.* CACM 21(2). [↗](https://dl.acm.org/doi/10.1145/359340.359342)
+
+## Author
+
+**Manikanta Reddy Mandadhi** — Senior Data Scientist (RAG / Agentic AI)
+
+GitHub: [@Mani9006](https://github.com/Mani9006/blockchain-certificates) · LinkedIn: [reddy1999](https://www.linkedin.com/in/reddy1999) · Portfolio: [manikantabio.com](https://www.manikantabio.com)
+
+<!-- showcase:end -->
